@@ -14,6 +14,7 @@ class Exercise03Test {
         assertEquals("2 * 2",Exercise03.analysisOutPrimeNumbers(4));
         assertEquals("2 * 2 * 2 * 3 * 5 * 5",Exercise03.analysisOutPrimeNumbers(600));
         assertEquals("Input khong hop le",Exercise03.analysisOutPrimeNumbers(1));
+        assertEquals(false, Exercise03.isPrimeNumber(1));
 
     }
 }

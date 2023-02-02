@@ -29,7 +29,7 @@ public class Exercise03 {
         return arr.toString();
     }
 
-    public static boolean isPrimeNumber(final int n) {
+    public boolean isPrimeNumber(final int n) {
         int primeN = n;
         if (primeN < 2) {
             return false;
