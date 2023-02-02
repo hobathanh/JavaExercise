@@ -6,12 +6,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Exercise01Test {
 
-
     @Test
-    void Subtract_OK() {
+    void USCLN_OK() {
         final var Exercise01 = new Exercise01();
 
-        assertEquals(15, Exercise01.subtract(19, 4));
-        assertEquals(13, Exercise01.subtract(18, 5));
+        assertEquals(7, Exercise01.USCLN(91, 287));
+        assertEquals(8, Exercise01.USCLN(16, 8));
+    }
+
+    @Test
+    void BSCNN_OK() {
+        final var Exercise01 = new Exercise01();
+
+        assertEquals(10, Exercise01.BSCNN(1, 10));
+        assertEquals(12, Exercise01.BSCNN(4, 6));
     }
 }
