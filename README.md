@@ -5,5 +5,5 @@
 
 ## Test coverage
 
-[![codecov](https://codecov.io/gh/hobathanh/JavaExercise/branch/ex02/graph/badge.svg?token=GZOGU20V2N)](https://codecov.io/gh/hobathanh/JavaExercise)
+[![codecov](https://codecov.io/gh/hobathanh/JavaExercise/branch/master/graph/badge.svg?token=GZOGU20V2N)](https://codecov.io/gh/hobathanh/JavaExercise)
 
