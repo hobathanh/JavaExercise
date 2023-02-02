@@ -6,43 +6,31 @@ public class Exercise03 {
 
     public String analysisOutPrimeNumbers(final int a) {
         int n = a;
-        final StringBuilder arr = new StringBuilder();
-        if(n < 2) {
-            return "Input khong hop le";
+        final StringBuilder resultString = new StringBuilder();
+        if(n == 0 || n == 1) {
+            return "0";
         }
-        else {
-            for(int i = 2; i <= n; i++) {
-                while (isPrimeNumber(i) && n % i == 0) {
-                    n = n / i;
-//                    if(n == 1) {
-//                        arr.append(i);
-//                    }
-//                    else {
-                    arr.append(i + " * ");
-                    }
+        else if (n < 0) {
+            return "n la so nguyen duong";
+        }
+        for(int i = 2; i <= n; i++) {
+            while (isPrimeNumber(i) && n % i == 0) {
+                n = n / i;
+                resultString.append(i + " * ");
                 }
-//                if (n == 1) {
-//                    break;
-//                }
             }
-        int last = arr.length() - 2;
-        arr.replace(last, last + 1, "");
-        return arr.toString().trim();
+        return resultString.substring(0, resultString.length() - 2).trim();
     }
 
     public boolean isPrimeNumber(final int n) {
-        int primeN = n;
-        if (primeN < 2) {
+        if (n < 2) {
             return false;
         }
-        else {
-            int squareRoot = (int) Math.sqrt(primeN);
-            for (int i = 2; i <= squareRoot; i++) {
-                if (primeN % i == 0) {
-                    return false;
-                }
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                return false;
             }
-            return true;
         }
+        return true;
     }
 }
