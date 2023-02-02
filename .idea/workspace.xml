@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dfdb215-0b14-47cb-982d-9c86df1bf455" name="Changes" comment="add Exercise01">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bathanh/exercise/basic/number/Exercise02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_02_2023_4_57_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_02_2023_4_57_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_02_2023_4_50_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_02_2023_4_50_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_02_2023_4_59_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_02_2023_4_59_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bathanh/exercise/basic/number/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bathanh/exercise/basic/number/Exercise01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bathanh/exercise/basic/number/Exercise01Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bathanh/exercise/basic/number/Exercise01Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
