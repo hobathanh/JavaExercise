@@ -34,13 +34,14 @@ public class Exercise03 {
         if (primeN < 2) {
             return false;
         }
-
-        int squareRoot = (int) Math.sqrt(primeN);
-        for (int i = 2; i <= squareRoot; i++) {
-            if (primeN % i == 0) {
-                return false;
+        else {
+            int squareRoot = (int) Math.sqrt(primeN);
+            for (int i = 2; i <= squareRoot; i++) {
+                if (primeN % i == 0) {
+                    return false;
+                }
             }
+            return true;
         }
-        return true;
     }
 }
