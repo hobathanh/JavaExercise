@@ -11,7 +11,7 @@ public class Exercise03 {
             return "Input khong hop le";
         }
         else {
-            for(int i = 2; i < n; i++) {
+            for(int i = 2; i <= n; i++) {
                 while (isPrimeNumber(i) && n % i == 0) {
                     n = n / i;
                     if(n == 1) {
