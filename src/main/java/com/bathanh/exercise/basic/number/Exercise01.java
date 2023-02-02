@@ -2,18 +2,18 @@ package com.bathanh.exercise.basic.number;
 
 public class Exercise01 {
 
-    public int calculateGCD(final int a,final int b) {
-        int A = a;
-        int B = b;
-        while (A != B) {
-            if (A > B){
-                A = A - B;
+    public int calculateGCD(final int a, final int b) {
+        int tempA = a;
+        int tempB = b;
+        while (tempA != tempB) {
+            if (tempA > tempB) {
+                tempA = tempA - tempB;
             }
-            else{
-                B = B - A;
+            else {
+                tempB = tempB - tempA;
             }
         }
-        return A;
+        return tempA;
     }
 
     public int calculateLCM(final int a, final int b) {
