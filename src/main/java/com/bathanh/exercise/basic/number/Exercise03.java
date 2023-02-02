@@ -14,19 +14,20 @@ public class Exercise03 {
             for(int i = 2; i <= n; i++) {
                 while (isPrimeNumber(i) && n % i == 0) {
                     n = n / i;
-                    if(n == 1) {
-                        arr.append(i);
-                    }
-                    else {
-                        arr.append(i + " * ");
+//                    if(n == 1) {
+//                        arr.append(i);
+//                    }
+//                    else {
+                    arr.append(i + " * ");
                     }
                 }
-                if (n == 1) {
-                    break;
-                }
+//                if (n == 1) {
+//                    break;
+//                }
             }
-        }
-        return arr.toString();
+        int last = arr.length() - 2;
+        arr.replace(last, last + 1, "");
+        return arr.toString().trim();
     }
 
     public boolean isPrimeNumber(final int n) {
