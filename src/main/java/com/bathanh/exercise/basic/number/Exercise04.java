@@ -1,2 +1,5 @@
-package com.bathanh.exercise.basic.number;public class Exercise04 {
+package com.bathanh.exercise.basic.number;
+
+public class Exercise04 {
+
 }
