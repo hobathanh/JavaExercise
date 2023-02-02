@@ -1,18 +1,23 @@
 package com.bathanh.exercise.basic.number;
 
 public class Exercise01 {
-    public int USCLN(int a, int b) {
-        while (a != b) {
-            if (a > b)
-                a = a - b;
-            else
-                b = b - a;
+
+    public int calculateGCD(final int a, final int b) {
+        int tempA = a;
+        int tempB = b;
+        while (tempA != tempB) {
+            if (tempA > tempB) {
+                tempA = tempA - tempB;
+            }
+            else {
+                tempB = tempB - tempA;
+            }
         }
-        return a;
+        return tempA;
     }
 
-    public int BSCNN(final int a, final int b) {
-        int result = USCLN(a,b);
-        return (a*b)/result;
+    public int calculateLCM(final int a, final int b) {
+        final int result = calculateGCD(a,b);
+        return (a * b) / result;
     }
 }
