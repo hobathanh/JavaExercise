@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dfdb215-0b14-47cb-982d-9c86df1bf455" name="Changes" comment="add Exercise01">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bathanh/exercise/basic/number/Exercise02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9dfdb215-0b14-47cb-982d-9c86df1bf455" name="Changes" comment="add Exercise01" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -65,7 +63,7 @@
       <recent name="com.bathanh.exercise.basic.number" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Exercise01Test.BSCNN_OK">
+  <component name="RunManager" selected="Gradle.Exercise02Test.calculateSumOfDigits_Ok">
     <configuration name="Exercise01Test.BSCNN_OK" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -135,8 +133,32 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Exercise02Test.calculateSumOfDigits_Ok" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.bathanh.exercise.basic.number.Exercise02Test.calculateSumOfDigits_Ok&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Exercise02Test.calculateSumOfDigits_Ok" />
         <item itemvalue="Gradle.Exercise01Test.BSCNN_OK" />
         <item itemvalue="Gradle.Exercise01Test.USCLN_OK" />
         <item itemvalue="Gradle.Exercise01Test.Subtract_OK" />
