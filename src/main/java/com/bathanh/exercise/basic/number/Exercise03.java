@@ -11,7 +11,7 @@ public class Exercise03 {
             return "0";
         }
         else if (n < 0) {
-            return "n la so nguyen duong";
+            return "- " + analysisOutPrimeNumbers(-n);
         }
         for(int i = 2; i <= n; i++) {
             while (isPrimeNumber(i) && n % i == 0) {

@@ -15,7 +15,8 @@ class Exercise03Test {
         assertEquals("0", Exercise03.analysisOutPrimeNumbers(0));
         assertEquals("2", Exercise03.analysisOutPrimeNumbers(2));
         assertEquals("2 * 2 * 2 * 3 * 5 * 5", Exercise03.analysisOutPrimeNumbers(600));
-        assertEquals("n la so nguyen duong", Exercise03.analysisOutPrimeNumbers(-4));
+        assertEquals("- 7", Exercise03.analysisOutPrimeNumbers(-7));
+        assertEquals("- 2 * 2 * 2", Exercise03.analysisOutPrimeNumbers(-8));
         assertEquals(false, Exercise03.isPrimeNumber(1));
     }
 }
