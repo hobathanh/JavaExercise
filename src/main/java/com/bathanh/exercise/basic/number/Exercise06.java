@@ -1,10 +1,5 @@
 package com.bathanh.exercise.basic.number;
 
-import java.text.DecimalFormat;
-
-import static java.lang.Math.abs;
-import static java.lang.Math.round;
-
 public class Exercise06 {
     public double calculateSqrt (final double a) {
         double inputA = a;
@@ -15,7 +10,7 @@ public class Exercise06 {
         } else if (inputA == 0) {
             return 0;
         }
-        while (abs(result * result - inputA) / inputA  >= epsilon)
+        while (Math.abs(result * result - inputA) / inputA  >= epsilon)
             result = (inputA / result  - result) / 2 + result;
         return (double) Math.round(result * 10000d)/10000d ;
     }
