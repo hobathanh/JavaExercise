@@ -8,21 +8,21 @@ class Exercise07Test {
 
     @Test
     void calculateEqual_Ok() {
-        final var Exercise07 = new Exercise07();
+        final var exercise07 = new Exercise07();
 
-        assertEquals("153 , 370 , 371 , 407 , 1634 , 8208 , 9474 , 54748 , 92727 , 93084", Exercise07.calculateEqual());
+        assertEquals("153 , 370 , 371 , 407 , 1634 , 8208 , 9474 , 54748 , 92727 , 93084", exercise07.calculateEqual());
     }
 
     @Test
     void sumNumber_Ok() {
-        final var Exercise07 = new Exercise07();
+        final var exercise07 = new Exercise07();
 
-        assertEquals(13, Exercise07.sumNumber(23));
+        assertEquals(13, exercise07.sumNumber(23));
     }
     @Test
     void numberOfDigits_Ok(){
-        final var Exercise07 = new Exercise07();
+        final var exercise07 = new Exercise07();
 
-        assertEquals(2, Exercise07.numberOfDigits(23));
+        assertEquals(2, exercise07.numberOfDigits(23));
     }
 }
