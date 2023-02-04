@@ -8,12 +8,13 @@ public class Exercise08 {
         while (inputN > 0) {
             reverseN <<= 1;
             if ((int) (n & 1) == 1)
-                rev ^= 1;
+                reverseN ^= 1;
 
             // bitwise right shift
             //'n' by
             inputN >>= 1;
         }
         // required number
+        return 0;
     }
 }
