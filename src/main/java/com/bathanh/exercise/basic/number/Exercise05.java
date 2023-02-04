@@ -8,12 +8,13 @@ public class Exercise05 {
         int i = 1;
         if (inputN < 0) {
             throw new IllegalArgumentException();
-        } else if (inputN == 0) {
+        }
+        if (inputN == 0) {
             return inputN;
         }
         while (i <= inputN) {
             total += i * (i + 1);
-            i ++;
+            i++;
         }
         return total;
     }
