@@ -9,7 +9,7 @@ public class Exercise07 {
                 resultString.append(i + " , ");
             }
         }
-        return resultString.substring(0, resultString.length() - 2).trim();
+        return resultString.substring(0, resultString.length() - 2);
     }
 
     public int sumNumber(final int n) {
