@@ -2,25 +2,21 @@ package com.bathanh.exercise.basic.number;
 
 public class Exercise09 {
 
-
     public double calculateSqrt(final double n) {
         double start = 0;
         double end = n;
-        double epsilon = 0.00001;
+        final double epsilon = 0.00001;
         if (n < 0) {
             throw new IllegalArgumentException();
         }
-        if (n == 0 || n == 1) {
-            return n;
-        }
         while (end - start >= epsilon) {
-            double midN = (start + end) / 2;
-            double sqrtN = midN * midN;
+            final double averageN = (start + end) / 2;
+            double sqrtN = averageN * averageN;
 
             if (sqrtN < n) {
-                start = midN;
+                start = averageN;
             } else {
-                end = midN;
+                end = averageN;
             }
         }
         return start;
