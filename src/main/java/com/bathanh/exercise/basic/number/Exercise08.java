@@ -1,8 +1,7 @@
 package com.bathanh.exercise.basic.number;
 
 public class Exercise08 {
-
-
+    
     public int reverseBits(final int n) {
         int inputN = n;
         int reverseN = 0;

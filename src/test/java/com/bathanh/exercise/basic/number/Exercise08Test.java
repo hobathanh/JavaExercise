@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Exercise08Test {
 
-
     @Test
     void reverseBits_OK() {
         final var exercise08 = new Exercise08();
