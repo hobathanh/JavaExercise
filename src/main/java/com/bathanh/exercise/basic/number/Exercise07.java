@@ -6,7 +6,7 @@ public class Exercise07 {
         final StringBuilder resultString = new StringBuilder();
         for (int i = 10; i <= 99999; i++) {
             if (i == sumNumber(i)) {
-                resultString.append(i + " , ");
+                resultString.append(i + ", ");
             }
         }
         return resultString.substring(0, resultString.length() - 2);

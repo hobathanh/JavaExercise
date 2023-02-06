@@ -10,7 +10,7 @@ class Exercise07Test {
     void calculateEqual_Ok() {
         final var exercise07 = new Exercise07();
 
-        assertEquals("153 , 370 , 371 , 407 , 1634 , 8208 , 9474 , 54748 , 92727 , 93084 ", exercise07.calculateEqual());
+        assertEquals("153, 370, 371, 407, 1634, 8208, 9474, 54748, 92727, 93084", exercise07.calculateEqual());
     }
 
     @Test
