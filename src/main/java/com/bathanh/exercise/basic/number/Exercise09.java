@@ -10,13 +10,12 @@ public class Exercise09 {
             throw new IllegalArgumentException();
         }
         while (end - start >= epsilon) {
-            final double averageN = (start + end) / 2;
-            double sqrtN = averageN * averageN;
+            final double middle = (start + end) / 2;
 
-            if (sqrtN < n) {
-                start = averageN;
+            if (middle * middle < n) {
+                start = middle;
             } else {
-                end = averageN;
+                end = middle;
             }
         }
         return start;
