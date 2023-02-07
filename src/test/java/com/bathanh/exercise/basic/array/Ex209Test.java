@@ -10,7 +10,7 @@ class Ex209Test {
     void sumPrimesArray() {
         final var ex209 = new Ex209();
 
-        assertEquals(10, ex209.sumPrimesArray(new int[]{1, 2, 3, 5, 6, 8}));
+        assertEquals(3, ex209.countPrimesArray(new int[]{1, 2, 3, 5, 6, 8}));
     }
 
     @Test

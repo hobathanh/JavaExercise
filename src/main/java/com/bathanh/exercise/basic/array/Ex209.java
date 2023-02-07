@@ -2,14 +2,14 @@ package com.bathanh.exercise.basic.array;
 
 public class Ex209 {
 
-    public int sumPrimesArray(final int[] array) {
-        int sum = 0;
+    public int countPrimesArray(final int[] array) {
+        int count = 0;
         for (int i = 0; i < array.length; i++) {
             if (checkPrime(array[i])) {
-                sum += array[i];
+                count += 1;
             }
         }
-        return sum;
+        return count;
     }
 
     public boolean checkPrime(final int a) {
