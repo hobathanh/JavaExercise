@@ -8,6 +8,10 @@ public class Ex207 {
         int j = 0;
         int i = 0;
         for (i = 0; i < newArray.length; i++) {
+            if (newArray.length - i == 1) {
+                newArray[i] = a;
+                break;
+            }
             if (a <= array[i]) {
                 newArray[i] = a;
                 break;
@@ -16,9 +20,6 @@ public class Ex207 {
             }
         }
 
-        if (newArray.length - i == 1) {
-            newArray[i] = a;
-        }
         for (int k = i + 1; k < newArray.length; k++) {
             newArray[k] = array[j++];
         }
