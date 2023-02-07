@@ -7,20 +7,20 @@ public class Ex207 {
         int[] newArray = new int[array.length + 1];
         int j = 0;
         int i = 0;
-        for (i = 0; i < newArray.length; i++) {
+        for (i = 0; i <= newArray.length - 1; i++) {
             if (a <= array[i]) {
                 newArray[i] = a;
                 break;
-            } else
+            } else {
                 newArray[i] = array[j++];
+            }
         }
-        for (int k = i + 1; k < newArray.length; k++) {
+        for (int k = i + 1; k <= newArray.length - 1; k++) {
             newArray[k] = array[j++];
         }
-        for (i = 0; i < newArray.length; i++) {
+        for (i = 0; i <= newArray.length - 1; i++) {
             resultArray.append(newArray[i] + ", ");
         }
-
         return resultArray.substring(0, resultArray.length() - 2);
     }
 }
