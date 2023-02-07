@@ -26,15 +26,15 @@ public class Ex207 {
         if (lengthArray == 0) {
             return index = 0;
         }
+        if (array[array.length - 1] < a) {
+            return array.length;
+        }
         for (int i = 0; i < array.length; i++) {
             if (a <= array[i]) {
                 index = i;
-                return index;
+                break;
             }
-            if (array.length - i == 1) {
-                index = i + 1;
-                return index;
-            }
+
         }
         return index;
     }
