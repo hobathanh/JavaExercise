@@ -7,7 +7,7 @@ public class Ex207 {
         int[] newArray = new int[array.length + 1];
         int j = 0;
         int i = 0;
-        for (i = 0; i <= newArray.length - 1; i++) {
+        for (i = 0; i < newArray.length; i++) {
             if (newArray.length - i == 1) {
                 newArray[i] = a;
                 break;
@@ -22,7 +22,7 @@ public class Ex207 {
         for (int k = i + 1; k < newArray.length; k++) {
             newArray[k] = array[j++];
         }
-        for (i = 0; i <= newArray.length - 1; i++) {
+        for (i = 0; i < newArray.length; i++) {
             resultArray.append(newArray[i] + ", ");
         }
         return resultArray.substring(0, resultArray.length() - 2);
