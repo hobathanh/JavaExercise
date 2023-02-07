@@ -12,5 +12,6 @@ class Ex206Test {
         final var ex206 = new Ex206();
 
         assertEquals(3, ex206.findIndexNumberBinarySearch(new int[]{1, -2, 3, 54, 12}, 54));
+        assertEquals(-1, ex206.findIndexNumberBinarySearch(new int[]{1, -2, 3, 54, 12}, 29));
     }
 }
