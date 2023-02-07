@@ -12,7 +12,7 @@ class Ex207Test {
 
         assertEquals("1, 2, 3, 6, 7", ex207.sortArrayAsc(new int[]{1, 2, 6, 7}, 3));
         assertEquals("2, 3, 5, 6, 7", ex207.sortArrayAsc(new int[]{3, 5, 6, 7}, 2));
-        assertEquals("1, 2, 3, 6, 6", ex207.sortArrayAsc(new int[]{1, 2, 3, 6}, 6));
+        assertEquals("1, 2, 2, 3, 6", ex207.sortArrayAsc(new int[]{1, 2, 3, 6}, 2));
         assertEquals("1, 2, 3, 6, 8", ex207.sortArrayAsc(new int[]{1, 2, 3, 6}, 8));
     }
 }
