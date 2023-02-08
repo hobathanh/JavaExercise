@@ -2,8 +2,7 @@ package com.bathanh.exercise.basic.array;
 
 public class Ex207 {
 
-    public String sortArrayAsc(final int[] array, final int a) {
-        StringBuilder resultArray = new StringBuilder();
+    public int[] sortArrayAsc(final int[] array, final int a) {
         int[] newArray = new int[array.length + 1];
         int index = indexArray(array, a);
         int j = 0;
@@ -14,10 +13,7 @@ public class Ex207 {
                 newArray[i] = array[j++];
             }
         }
-        for (int i = 0; i < newArray.length; i++) {
-            resultArray.append(newArray[i] + ", ");
-        }
-        return resultArray.substring(0, resultArray.length() - 2);
+        return newArray;
     }
 
     public int indexArray(int[] array, int a) {
