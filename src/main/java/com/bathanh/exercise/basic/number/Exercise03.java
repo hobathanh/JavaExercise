@@ -17,7 +17,6 @@ public class Exercise03 {
                 resultString.append(i + " * ");
             }
         }
-
         return resultString.substring(0, resultString.length() - 3);
     }
 }
