@@ -1,9 +1,10 @@
 package com.bathanh.exercise.basic.array;
 
+import java.util.Arrays;
+
 public class Ex204 {
 
-    public String findMaxLengthArray(final int[] array) {
-        StringBuilder resultString = new StringBuilder();
+    public int[] findMaxLengthArray(final int[] array) {
         int length = 1;
         int max = 1;
         int start = 0;
@@ -21,9 +22,7 @@ public class Ex204 {
                 length = 1;
             }
         }
-        for (int i = start; i < end; i++) {
-            resultString.append(array[i] + ", ");
-        }
-        return resultString.substring(0, resultString.length() - 2);
+
+        return Arrays.copyOfRange(array, start, end);
     }
 }
