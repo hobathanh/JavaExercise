@@ -16,20 +16,19 @@ public class Ex207 {
         return newArray;
     }
 
-    public int indexArray(int[] array, int a) {
-        int index = 0;
-        int lengthArray = array.length;
-        if (lengthArray == 0) {
-            return 0;
-        }
-        if (array[array.length - 1] < a) {
-            return array.length;
-        }
-        for (int i = 1; i <= array.length - 1; i++) {
-            if (a <= array[i] && a >= array[i - 1]) {
-                index = i;
+    public int indexArray(final int[] array, final int a) {
+        int low = 0, high = array.length - 1;
+        while (low <= high) {
+            int m = low + (high - low) / 2;
+
+            if (array[m] == a) {
+                return m;
             }
+            if (array[m] < a)
+                low = m + 1;
+            else
+                high = m - 1;
         }
-        return index;
+        return low;
     }
 }
