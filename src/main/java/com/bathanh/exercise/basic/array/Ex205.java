@@ -6,10 +6,11 @@ public class Ex205 {
         int maxArray = array[0];
         int minArray = array[0];
 
-        for (int i = 0; i < array.length - 1; i++) {
-            if (array[i] < minArray) {
+        for (int i = 0; i < array.length; i++) {
+            if (minArray > array[i]) {
                 minArray = array[i];
-            } else if (array[i] > maxArray) {
+            }
+            if (maxArray < array[i]) {
                 maxArray = array[i];
             }
         }
