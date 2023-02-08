@@ -16,7 +16,7 @@ public class Ex209 {
         if (a <= 1) {
             return false;
         }
-        for (int i = 2; i <= a / 2; i++) {
+        for (int i = 2; i * i <= a; i++) {
             if (a % i == 0) {
                 return false;
             }
