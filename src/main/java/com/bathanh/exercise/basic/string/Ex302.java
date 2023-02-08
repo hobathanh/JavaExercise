@@ -7,7 +7,7 @@ public class Ex302 {
         int length = s.length();
 
         if (length == 0) {
-            return true;
+            return false;
         }
         if (length % 2 == 0) {
             midIndex = length / 2;
