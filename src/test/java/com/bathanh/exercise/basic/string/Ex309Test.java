@@ -11,5 +11,6 @@ class Ex309Test {
         final var ex309 = new Ex309();
 
         assertEquals("Ho Ba Thanh", ex309.formatString("ho bA tHANH"));
+        assertEquals("Ho Ba Thanh", ex309.formatString(" ho bA tHANH"));
     }
 }
