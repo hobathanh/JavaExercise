@@ -8,9 +8,9 @@ public class Ex310 {
         for (int i = 0; i < s.length() - 1; i++) {
             if (s.charAt(i) == ' ' && s.charAt(i + 1) == ' ') {
                 continue;
-            } else {
-                result.append(s.charAt(i));
             }
+            result.append(s.charAt(i));
+
         }
         return result.toString().trim();
     }
