@@ -18,5 +18,6 @@ class Ex308Test {
         assertFalse(ex308.checkString(")"));
         assertFalse(ex308.checkString("()("));
         assertFalse(ex308.checkString(")()"));
+        assertFalse(ex308.checkString(")("));
     }
 }
