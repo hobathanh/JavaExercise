@@ -14,5 +14,6 @@ class Ex306Test {
         assertThrows(IllegalArgumentException.class, () -> ex306.calculateBarcode("1213213"));
         assertEquals(4, ex306.calculateBarcode("893850597419"));
         assertEquals(5, ex306.calculateBarcode("123456789000"));
+         assertEquals(0, ex306.calculateBarcode("623456789000"));
     }
 }
