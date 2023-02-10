@@ -2,7 +2,8 @@ package com.bathanh.exercise.basic.string;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class Ex302Test {
 
@@ -10,10 +11,10 @@ class Ex302Test {
     void checkSymmetricString_Ok() {
         final var ex302 = new Ex302();
 
-        assertEquals(true, ex302.checkSymmetricString("abba"));
-        assertEquals(true, ex302.checkSymmetricString("abdba"));
-        assertEquals(true, ex302.checkSymmetricString("0"));
-        assertEquals(false, ex302.checkSymmetricString(""));
-        assertEquals(false, ex302.checkSymmetricString("abcabc"));
+        assertTrue(ex302.checkSymmetricString("abba"));
+        assertTrue(ex302.checkSymmetricString("abdba"));
+        assertTrue(ex302.checkSymmetricString("0"));
+        assertTrue(ex302.checkSymmetricString(""));
+        assertFalse(ex302.checkSymmetricString("abcabc"));
     }
 }

@@ -2,30 +2,18 @@ package com.bathanh.exercise.basic.string;
 
 public class Ex302 {
 
-    public boolean checkSymmetricString(String s) {
-        int midIndex;
-        int length = s.length();
+    public boolean checkSymmetricString(final String s) {
+        String inputString = s;
 
-        if (length == 0) {
-            return false;
-        }
-        if (length % 2 == 0) {
-            midIndex = length / 2;
-        } else {
-            midIndex = length / 2 + 1;
+        if (inputString.length() == 0 || inputString.length() == 1) {
+            return true;
         }
 
-        int indexString1 = 0;
-        int indexString2 = length - 1;
-        while (indexString1 < midIndex && indexString2 >= midIndex) {
-            if (s.charAt(indexString1) == s.charAt(indexString2)) {
-                indexString1 += 1;
-                indexString2 -= 1;
-            } else {
-                return false;
-            }
+        if (inputString.charAt(0) == inputString.charAt(inputString.length() - 1)) {
+            return checkSymmetricString(inputString.substring(1, inputString.length() - 1));
         }
-        return true;
+
+        return false;
     }
 }
 
