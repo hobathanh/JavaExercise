@@ -6,11 +6,9 @@ public class Ex310 {
         StringBuffer result = new StringBuffer();
 
         for (int i = 0; i < s.length() - 1; i++) {
-            if (s.charAt(i) == ' ' && s.charAt(i + 1) == ' ') {
-                continue;
+            if (!(s.charAt(i) == ' ' && s.charAt(i + 1) == ' ')) {
+                result.append(s.charAt(i));
             }
-            result.append(s.charAt(i));
-
         }
         return result.toString().trim();
     }
