@@ -3,18 +3,14 @@ package com.bathanh.exercise.basic.string;
 public class Ex307 {
 
     public boolean searchStringInString(final String s1, final String s2) {
-
-        int lengthS1 = s1.length();
-        int lengthS2 = s2.length();
-
-        for (int i = 0; i <= lengthS2 - lengthS1; i++) {
+        for (int i = 0; i <= s2.length() - s1.length(); i++) {
             int j;
-            for (j = 0; j < lengthS1; j++) {
+            for (j = 0; j < s1.length(); j++) {
                 if (s2.charAt(i + j) != s1.charAt(j)) {
                     break;
                 }
             }
-            if (j == lengthS1) {
+            if (j == s1.length()) {
                 return true;
             }
         }
