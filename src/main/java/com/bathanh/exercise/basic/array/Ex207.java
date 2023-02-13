@@ -4,7 +4,7 @@ public class Ex207 {
 
     public int[] insertToSortedArray(final int[] array, final int a) {
         int[] newArray = new int[array.length + 1];
-        int index = indexArray(array, a);
+        int index = findInSearchIndex(array, a);
 
         for (int i = 0; i < index; i++) {
             newArray[i] = array[i];
@@ -16,7 +16,7 @@ public class Ex207 {
         return newArray;
     }
 
-    public int indexArray(final int[] array, final int a) {
+    public int findInSearchIndex(final int[] array, final int a) {
         int low = 0;
         int high = array.length - 1;
         while (low <= high) {

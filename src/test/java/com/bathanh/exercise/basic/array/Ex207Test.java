@@ -23,12 +23,12 @@ class Ex207Test {
     void indexArray_Ok() {
         final var ex207 = new Ex207();
 
-        assertEquals(2, ex207.indexArray(new int[]{1, 2, 6, 7}, 3));
-        assertEquals(0, ex207.indexArray(new int[]{3, 5, 6, 7}, 2));
-        assertEquals(0, ex207.indexArray(new int[]{3, 5, 6, 7}, -3));
-        assertEquals(1, ex207.indexArray(new int[]{1, 2, 3, 6}, 2));
-        assertEquals(4, ex207.indexArray(new int[]{1, 2, 3, 6}, 8));
-        assertEquals(0, ex207.indexArray(new int[]{}, 1));
-        assertEquals(0, ex207.indexArray(new int[]{}, 0));
+        assertEquals(2, ex207.findInSearchIndex(new int[]{1, 2, 6, 7}, 3));
+        assertEquals(0, ex207.findInSearchIndex(new int[]{3, 5, 6, 7}, 2));
+        assertEquals(0, ex207.findInSearchIndex(new int[]{3, 5, 6, 7}, -3));
+        assertEquals(1, ex207.findInSearchIndex(new int[]{1, 2, 3, 6}, 2));
+        assertEquals(4, ex207.findInSearchIndex(new int[]{1, 2, 3, 6}, 8));
+        assertEquals(0, ex207.findInSearchIndex(new int[]{}, 1));
+        assertEquals(0, ex207.findInSearchIndex(new int[]{}, 0));
     }
 }
