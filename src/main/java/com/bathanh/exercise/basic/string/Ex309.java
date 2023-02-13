@@ -3,7 +3,7 @@ package com.bathanh.exercise.basic.string;
 public class Ex309 {
 
     public String formatString(final String s) {
-        StringBuffer result = new StringBuffer();
+        final StringBuffer result = new StringBuffer();
         char ch = ' ';
 
         for (int i = 0; i < s.length(); i++) {
