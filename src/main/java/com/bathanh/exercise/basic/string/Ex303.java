@@ -6,7 +6,8 @@ public class Ex303 {
         int sum = 0;
         int number = 0;
         int j = 0;
-        for (int i = 0; i < s.length(); i++) {
+        int i = 0;
+        while (i < s.length()) {
             if (s.charAt(i) >= '0' && s.charAt(i) <= '9') {
                 number = s.charAt(i) - '0';
                 for (j = i + 1; j < s.length(); j++) {
@@ -18,6 +19,7 @@ public class Ex303 {
                 sum += number;
                 i = j;
             }
+            i++;
         }
         return sum;
     }
