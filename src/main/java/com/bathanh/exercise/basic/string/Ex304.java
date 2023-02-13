@@ -6,23 +6,27 @@ public class Ex304 {
         String childString = "";
         for (int i = 0; i < str.length() / 2; i++) {
             childString += str.charAt(i);
-            if (str.length() % childString.length() == 0 && isRepeating(str, childString)) {
+            if (isRepeating(str, childString)) {
                 return true;
             }
         }
         return false;
     }
 
-    public boolean isRepeating(String str, String child) {
-        String leftOverString = str;
-        int currIndex = leftOverString.indexOf(child);
-        while (currIndex == 0) {
-            if (currIndex + child.length() == leftOverString.length()) {
-                return true;
-            }
-            leftOverString = leftOverString.substring(currIndex + child.length());
-            currIndex = leftOverString.indexOf(child);
+    public boolean isRepeating(final String s1, final String s2) {
+        if (s1.length() < s2.length() || s2.length() < 0) {
+            return false;
         }
-        return false;
+        if (s1.length() % s2.length() != 0) {
+            return false;
+        }
+        for (int i = 0; i < s2.length(); i++) {
+            for (int j = 0; j < s1.length() / s2.length(); j++) {
+                if (s2.charAt(i) != s1.charAt(j * s2.length() + i)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
