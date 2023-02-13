@@ -9,11 +9,13 @@ public class Ex302 {
             return true;
         }
 
-        if (inputString.charAt(0) == inputString.charAt(inputString.length() - 1)) {
-            return checkSymmetricString(inputString.substring(1, inputString.length() - 1));
+        for (int i = 0; i <= inputString.length() / 2; i++) {
+            if (inputString.charAt(i) != inputString.charAt(inputString.length() - 1 - i)) {
+                return false;
+            }
         }
 
-        return false;
+        return true;
     }
 }
 
