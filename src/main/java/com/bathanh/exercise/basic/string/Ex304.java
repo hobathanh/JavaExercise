@@ -14,9 +14,6 @@ public class Ex304 {
     }
 
     public boolean isRepeating(final String s1, final String s2) {
-        if (s1.length() < s2.length() || s2.length() < 0) {
-            return false;
-        }
         if (s1.length() % s2.length() != 0) {
             return false;
         }
