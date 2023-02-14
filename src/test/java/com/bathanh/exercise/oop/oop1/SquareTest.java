@@ -23,9 +23,11 @@ class SquareTest {
     void contains() {
         Point pointTest1 = new Point(2, 2);
         Point pointTest2 = new Point(6, 7);
+        Point pointTest3 = new Point(8, 9);
 
         assertFalse(square.contains(pointTest1));
         assertTrue(square.contains(point1));
         assertTrue(square.contains(pointTest2));
+        assertTrue(square.contains(pointTest3));
     }
 }

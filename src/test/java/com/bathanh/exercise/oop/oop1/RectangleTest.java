@@ -28,6 +28,7 @@ class RectangleTest {
 
         assertFalse(rectangle.contains(pointTest1));
         assertTrue(rectangle.contains(point1));
+        assertTrue(rectangle.contains(point2));
         assertTrue(rectangle.contains(pointTest2));
     }
 }
