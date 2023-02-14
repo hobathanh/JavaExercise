@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SquareTest {
 
-    Point point1 = new Point(3, 4);
+    final Point point1 = new Point(3, 4);
     Shape square = new Square(point1, 5);
 
     @Test
@@ -21,9 +21,9 @@ class SquareTest {
 
     @Test
     void contains() {
-        Point pointTest1 = new Point(2, 2);
-        Point pointTest2 = new Point(6, 7);
-        Point pointTest3 = new Point(8, 9);
+        final Point pointTest1 = new Point(2, 2);
+        final Point pointTest2 = new Point(6, 7);
+        final Point pointTest3 = new Point(8, 9);
 
         assertFalse(square.contains(pointTest1));
         assertTrue(square.contains(point1));
