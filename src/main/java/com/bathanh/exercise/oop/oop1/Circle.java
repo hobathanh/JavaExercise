@@ -23,8 +23,8 @@ public class Circle implements Shape {
 
     @Override
     public boolean contains(Point point) {
-        double x = point.getX();
-        double y = point.getY();
+        final double x = point.getX();
+        final double y = point.getY();
         double dx = Math.abs(x - center.getX());
         double dy = Math.abs(y - center.getY());
         return (dx * dx + dy * dy <= radius * radius);

@@ -6,7 +6,7 @@ public class Square implements Shape {
     private Point pointBottomLeft;
 
     public Square() {
-        pointBottomLeft = new Point(0, 0);
+//        pointBottomLeft = new Point(0, 0);
         side = 1;
     }
 
@@ -22,20 +22,17 @@ public class Square implements Shape {
 
     @Override
     public double getPerimeter() {
-        return (side + side) * 2;
+        return side * 4;
     }
 
     @Override
     public boolean contains(Point point) {
-        double x = point.getX();
-        double y = point.getY();
+        final double x = point.getX();
+        final double y = point.getY();
         double xBottomLeft = pointBottomLeft.getX();
         double yBottomLeft = pointBottomLeft.getY();
         double xTopRight = pointBottomLeft.getX() + side;
         double yTopRight = pointBottomLeft.getY() + side;
-        if ((x >= xBottomLeft && x <= xTopRight) && (y >= yBottomLeft && y <= yTopRight)) {
-            return true;
-        }
-        return false;
+        return (x >= xBottomLeft && x <= xTopRight) && (y >= yBottomLeft && y <= yTopRight);
     }
 }

@@ -20,32 +20,29 @@ public class Triangle implements Shape {
         double x3 = point3.getX();
         double y3 = point3.getY();
 
-        return Math.abs(0.5 * ((x1 * (y2 - y3)) + (x2 * (y3 - y1)) + (x3 * (y1 - y2))));
+        return Math.abs(0.5 * ((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1)));
+    }
+
+    public double calculateDistance(Point point1, Point point2) {
+        return Math.sqrt((point2.getX() - point1.getX()) * (point2.getX() - point1.getX())
+                + (point2.getY() - point1.getY()) * (point2.getY() - point1.getY()));
     }
 
     public double getPerimeter() {
-        double x1 = point1.getX();
-        double y1 = point1.getY();
-        double x2 = point2.getX();
-        double y2 = point2.getY();
-        double x3 = point3.getX();
-        double y3 = point3.getY();
-        double x12 = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-        double x23 = Math.sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3));
-        double x13 = Math.sqrt((x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1));
-        return x12 + x23 + x13;
+        return calculateDistance(point1, point2) + calculateDistance(point1, point3) + calculateDistance(point2, point3);
     }
 
     @Override
     public boolean contains(Point point) {
+        final double x = point.getX();
+        final double y = point.getY();
         double x1 = point1.getX();
         double y1 = point1.getY();
         double x2 = point2.getX();
         double y2 = point2.getY();
         double x3 = point3.getX();
         double y3 = point3.getY();
-        double x = point.getX();
-        double y = point.getY();
+
         var s = (x1 - x3) * (y - y3) - (y1 - y3) * (x - x3);
         var t = (x2 - x1) * (y - y1) - (y2 - y1) * (x - x1);
 

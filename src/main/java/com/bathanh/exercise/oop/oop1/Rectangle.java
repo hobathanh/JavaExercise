@@ -29,11 +29,8 @@ public class Rectangle extends Square {
 
     @Override
     public boolean contains(Point point) {
-        double x = point.getX();
-        double y = point.getY();
-        if ((x >= pointBottomLeft.getX() && x <= pointTopRight.getX()) && (y >= pointBottomLeft.getY() && y <= pointTopRight.getY())) {
-            return true;
-        }
-        return false;
+        final double x = point.getX();
+        final double y = point.getY();
+        return (x >= pointBottomLeft.getX() && x <= pointTopRight.getX()) && (y >= pointBottomLeft.getY() && y <= pointTopRight.getY());
     }
 }
