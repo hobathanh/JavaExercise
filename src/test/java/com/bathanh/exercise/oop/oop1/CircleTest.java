@@ -2,14 +2,12 @@ package com.bathanh.exercise.oop.oop1;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 
 class CircleTest {
 
-    Point point1 = new Point(3, 4);
-    Point point2 = new Point(7, 4);
-    Shape circle = new Circle(point2, 3);
+    Point point1 = new Point(7, 4);
+    Shape circle = new Circle(point1, 3);
 
     @Test
     void getArea() {
@@ -23,6 +21,10 @@ class CircleTest {
 
     @Test
     void contains() {
-        assertFalse(circle.contains(point1));
+        Point pointTest1 = new Point(8, 5);
+        Point pointTest2 = new Point(2, 2);
+
+        assertFalse(circle.contains(pointTest2));
+        assertTrue(circle.contains(pointTest1));
     }
 }

@@ -2,16 +2,14 @@ package com.bathanh.exercise.oop.oop1;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 
 class RectangleTest {
 
 
     Point point1 = new Point(3, 4);
-    Point point2 = new Point(7, 4);
-    Point point3 = new Point(5, 8);
-    Square rectangle = new Rectangle(point1, point3);
+    Point point2 = new Point(5, 8);
+    Square rectangle = new Rectangle(point1, point2);
 
     @Test
     void getArea() {
@@ -25,6 +23,11 @@ class RectangleTest {
 
     @Test
     void contains() {
-        assertFalse(rectangle.contains(point2));
+        Point pointTest1 = new Point(7, 4);
+        Point pointTest2 = new Point(4, 5);
+
+        assertFalse(rectangle.contains(pointTest1));
+        assertTrue(rectangle.contains(point1));
+        assertTrue(rectangle.contains(pointTest2));
     }
 }

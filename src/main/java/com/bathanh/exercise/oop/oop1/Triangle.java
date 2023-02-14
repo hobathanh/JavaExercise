@@ -6,13 +6,6 @@ public class Triangle implements Shape {
     private Point point2;
     private Point point3;
 
-
-    public Triangle() {
-        point1 = new Point(0, 0);
-        point2 = new Point(0, 0);
-        point3 = new Point(0, 0);
-    }
-
     public Triangle(Point point1, Point point2, Point point3) {
         this.point1 = point1;
         this.point2 = point2;

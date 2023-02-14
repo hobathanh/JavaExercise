@@ -5,10 +5,6 @@ public class Circle implements Shape {
     private double radius;
     private Point center;
 
-    public Circle() {
-        center = new Point(0, 0);
-        radius = 1;
-    }
 
     public Circle(Point center, double radius) {
         this.center = center;

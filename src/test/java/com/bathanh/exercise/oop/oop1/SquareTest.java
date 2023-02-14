@@ -2,12 +2,11 @@ package com.bathanh.exercise.oop.oop1;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class SquareTest {
 
     Point point1 = new Point(3, 4);
-    Point point2 = new Point(7, 4);
     Shape square = new Square(point1, 5);
 
     @Test
@@ -22,6 +21,11 @@ class SquareTest {
 
     @Test
     void contains() {
-        assertEquals(true, square.contains(point2));
+        Point pointTest1 = new Point(2, 2);
+        Point pointTest2 = new Point(6, 7);
+
+        assertFalse(square.contains(pointTest1));
+        assertTrue(square.contains(point1));
+        assertTrue(square.contains(pointTest2));
     }
 }
