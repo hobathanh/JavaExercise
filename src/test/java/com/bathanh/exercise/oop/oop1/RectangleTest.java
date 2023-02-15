@@ -25,8 +25,13 @@ class RectangleTest {
     void contains() {
         final Point pointTest1 = new Point(7, 4);
         final Point pointTest2 = new Point(4, 5);
+        final Point pointTest3 = new Point(2, 2);
+        final Point pointTest4 = new Point(6, 9);
+
 
         assertFalse(rectangle.contains(pointTest1));
+        assertFalse(rectangle.contains(pointTest3));
+        assertFalse(rectangle.contains(pointTest4));
         assertTrue(rectangle.contains(point1));
         assertTrue(rectangle.contains(point2));
         assertTrue(rectangle.contains(pointTest2));
