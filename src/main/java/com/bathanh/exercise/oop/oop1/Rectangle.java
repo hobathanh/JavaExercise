@@ -5,10 +5,10 @@ public class Rectangle implements Shape {
     private final Point pointBottomLeft;
     private final Point pointTopRight;
 
-    public Rectangle() {
-        pointTopRight = new Point(0, 0);
-        pointBottomLeft = new Point(0, 0);
-    }
+//    public Rectangle() {
+//        pointTopRight = new Point(0, 0);
+//        pointBottomLeft = new Point(0, 0);
+//    }
 
     public Rectangle(Point bottomLeft, Point topRight) {
         this.pointBottomLeft = bottomLeft;
@@ -37,6 +37,9 @@ public class Rectangle implements Shape {
         if (!(x >= pointBottomLeft.getX() && x <= pointTopRight.getX())) {
             return false;
         }
-        return y >= pointBottomLeft.getY() && y <= pointTopRight.getY();
+        if (!(y >= pointBottomLeft.getY() && y <= pointTopRight.getY())) {
+            return false;
+        }
+        return true;
     }
 }
