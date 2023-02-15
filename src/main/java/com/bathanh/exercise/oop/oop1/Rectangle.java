@@ -37,9 +37,6 @@ public class Rectangle implements Shape {
         if (!(x >= pointBottomLeft.getX() && x <= pointTopRight.getX())) {
             return false;
         }
-        if (!(y >= pointBottomLeft.getY() && y <= pointTopRight.getY())) {
-            return false;
-        }
-        return true;
+        return y >= pointBottomLeft.getY() && y <= pointTopRight.getY();
     }
 }

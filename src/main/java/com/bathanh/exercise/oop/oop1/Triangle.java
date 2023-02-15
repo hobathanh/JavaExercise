@@ -27,24 +27,26 @@ public class Triangle implements Shape {
         return point1.distanceTo(point2) + point2.distanceTo(point3) + point3.distanceTo(point1);
     }
 
-    @Override
-    public boolean contains(Point point) {
+    public double sideOfTheLine(final Point point1, final Point point2, final Point point) {
         final double x = point.getX();
         final double y = point.getY();
-        double x1 = point1.getX();
-        double y1 = point1.getY();
-        double x2 = point2.getX();
-        double y2 = point2.getY();
-        double x3 = point3.getX();
-        double y3 = point3.getY();
+        final double x1 = point1.getX();
+        final double y1 = point1.getY();
+        final double x2 = point2.getX();
+        final double y2 = point2.getY();
+        return (x - x1) * (y2 - y1) - (y - y1) * (x2 - x1);
+    }
 
-        var s = (x1 - x3) * (y - y3) - (y1 - y3) * (x - x3);
-        var t = (x2 - x1) * (y - y1) - (y2 - y1) * (x - x1);
-
-        if ((s < 0) != (t < 0) && s != 0 && t != 0)
+    @Override
+    public boolean contains(final Point point) {
+        if (sideOfTheLine(point1, point2, point) * sideOfTheLine(point1, point2, point3) < 0) {
             return false;
-        var d = (x3 - x2) * (y - y2) - (y3 - y2) * (x - x2);
+        }
 
-        return (d == 0) || (d < 0) == (s + t <= 0);
+        if (sideOfTheLine(point1, point3, point) * sideOfTheLine(point1, point3, point2) < 0) {
+            return false;
+        }
+
+        return sideOfTheLine(point2, point3, point) * sideOfTheLine(point2, point3, point1) >= 0;
     }
 }

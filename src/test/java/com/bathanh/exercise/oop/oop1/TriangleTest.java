@@ -2,8 +2,7 @@ package com.bathanh.exercise.oop.oop1;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 
 class TriangleTest {
 
@@ -25,11 +24,12 @@ class TriangleTest {
 
     @Test
     void contains() {
-        final Point pointTest1 = new Point(3, 3);
-//        final Point pointTest2 = new Point(5, 6);
-
-        assertFalse(triangle.contains(pointTest1));
-//        assertTrue(triangle.contains(point1));
-//        assertTrue(triangle.contains(pointTest2));
+        assertFalse(triangle.contains(new Point(3, 3)));
+        assertFalse(triangle.contains(new Point(6, 8)));
+        assertFalse(triangle.contains(new Point(8, 4)));
+        assertTrue(triangle.contains(point1));
+        assertTrue(triangle.contains(point2));
+        assertTrue(triangle.contains(point3));
+        assertTrue(triangle.contains(new Point(5, 6)));
     }
 }

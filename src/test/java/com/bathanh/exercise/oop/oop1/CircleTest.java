@@ -21,10 +21,7 @@ class CircleTest {
 
     @Test
     void contains() {
-        final Point pointTest1 = new Point(8, 5);
-        final Point pointTest2 = new Point(2, 2);
-
-        assertFalse(circle.contains(pointTest2));
-        assertTrue(circle.contains(pointTest1));
+        assertFalse(circle.contains(new Point(2, 2)));
+        assertTrue(circle.contains(new Point(8, 5)));
     }
 }

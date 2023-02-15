@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RectangleTest {
 
-
     final Point point1 = new Point(3, 4);
     final Point point2 = new Point(5, 8);
     Shape rectangle = new Rectangle(point1, point2);
@@ -23,17 +22,11 @@ class RectangleTest {
 
     @Test
     void contains() {
-        final Point pointTest1 = new Point(7, 4);
-        final Point pointTest2 = new Point(4, 5);
-        final Point pointTest3 = new Point(2, 2);
-        final Point pointTest4 = new Point(6, 9);
-
-
-        assertFalse(rectangle.contains(pointTest1));
-        assertFalse(rectangle.contains(pointTest3));
-        assertFalse(rectangle.contains(pointTest4));
+        assertFalse(rectangle.contains(new Point(7, 4)));
+        assertFalse(rectangle.contains(new Point(2, 2)));
+        assertFalse(rectangle.contains(new Point(6, 9)));
         assertTrue(rectangle.contains(point1));
         assertTrue(rectangle.contains(point2));
-        assertTrue(rectangle.contains(pointTest2));
+        assertTrue(rectangle.contains(new Point(4, 5)));
     }
 }
