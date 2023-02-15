@@ -6,7 +6,6 @@ public class Square implements Shape {
     private Point pointBottomLeft;
 
     public Square() {
-//        pointBottomLeft = new Point(0, 0);
         side = 1;
     }
 
@@ -33,6 +32,13 @@ public class Square implements Shape {
         double yBottomLeft = pointBottomLeft.getY();
         double xTopRight = pointBottomLeft.getX() + side;
         double yTopRight = pointBottomLeft.getY() + side;
-        return (x >= xBottomLeft && x <= xTopRight) && (y >= yBottomLeft && y <= yTopRight);
+
+        if (x < xBottomLeft || x > xTopRight) {
+            return false;
+        }
+        if (y < yBottomLeft || y > yTopRight) {
+            return false;
+        }
+        return true;
     }
 }
