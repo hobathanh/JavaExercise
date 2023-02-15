@@ -2,9 +2,9 @@ package com.bathanh.exercise.oop.oop1;
 
 public class Triangle implements Shape {
 
-    private Point point1;
-    private Point point2;
-    private Point point3;
+    private final Point point1;
+    private final Point point2;
+    private final Point point3;
 
     public Triangle(Point point1, Point point2, Point point3) {
         this.point1 = point1;

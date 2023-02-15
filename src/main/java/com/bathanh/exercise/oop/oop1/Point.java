@@ -1,8 +1,8 @@
 package com.bathanh.exercise.oop.oop1;
 
 public class Point {
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     public Point(int x, int y) {
         this.x = x;

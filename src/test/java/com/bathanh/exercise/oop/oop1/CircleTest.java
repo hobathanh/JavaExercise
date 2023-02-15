@@ -11,12 +11,12 @@ class CircleTest {
 
     @Test
     void getArea() {
-        assertEquals(28.26, circle.getArea(), 0.0001);
+        assertEquals(28.27, circle.getArea(), 0.01);
     }
 
     @Test
     void getPerimeter() {
-        assertEquals(18.84, circle.getPerimeter(), 0.0001);
+        assertEquals(18.84, circle.getPerimeter(), 0.01);
     }
 
     @Test

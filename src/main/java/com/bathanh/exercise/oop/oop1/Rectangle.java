@@ -2,19 +2,13 @@ package com.bathanh.exercise.oop.oop1;
 
 public class Rectangle extends Square {
 
-    private Point pointBottomLeft;
-    private Point pointTopRight;
+    private final Point pointBottomLeft;
+    private final Point pointTopRight;
 
-    public Rectangle() {
-        super();
-        pointBottomLeft = new Point(0, 0);
-        pointTopRight = new Point(0, 0);
-    }
 
-    public Rectangle(Point pointBottomLeft, Point pointTopRight) {
-        this();
-        this.pointBottomLeft = pointBottomLeft;
-        this.pointTopRight = pointTopRight;
+    public Rectangle(Point bottomLeft, Point topRight) {
+        this.pointBottomLeft = bottomLeft;
+        this.pointTopRight = topRight;
     }
 
     @Override
@@ -24,7 +18,11 @@ public class Rectangle extends Square {
 
     @Override
     public double getPerimeter() {
-        return 2 * ((pointTopRight.getX() - pointBottomLeft.getX()) + (pointTopRight.getY() - pointBottomLeft.getY()));
+        final double xTopRight = pointTopRight.getX();
+        final double yTopRight = pointTopRight.getY();
+        final double xBottomLeft = pointBottomLeft.getX();
+        final double yBottomLeft = pointBottomLeft.getY();
+        return 2 * ((xTopRight - xBottomLeft) + (yTopRight - yBottomLeft));
     }
 
     @Override
