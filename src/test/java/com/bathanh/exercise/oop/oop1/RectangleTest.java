@@ -9,7 +9,7 @@ class RectangleTest {
 
     final Point point1 = new Point(3, 4);
     final Point point2 = new Point(5, 8);
-    Square rectangle = new Rectangle(point1, point2);
+    Shape rectangle = new Rectangle(point1, point2);
 
     @Test
     void getArea() {

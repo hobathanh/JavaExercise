@@ -1,13 +1,10 @@
 package com.bathanh.exercise.oop.oop1;
 
-public class Square implements Shape {
+public class Square extends Rectangle {
 
     private double side;
     private Point pointBottomLeft;
 
-    public Square() {
-        side = 1;
-    }
 
     public Square(Point pointBottomLeft, double side) {
         this.pointBottomLeft = pointBottomLeft;
@@ -33,12 +30,9 @@ public class Square implements Shape {
         double xTopRight = pointBottomLeft.getX() + side;
         double yTopRight = pointBottomLeft.getY() + side;
 
-        if (x < xBottomLeft || x > xTopRight) {
+        if (!(x >= xBottomLeft && x <= xTopRight)) {
             return false;
         }
-        if (y < yBottomLeft || y > yTopRight) {
-            return false;
-        }
-        return true;
+        return y >= yBottomLeft && y <= yTopRight;
     }
 }

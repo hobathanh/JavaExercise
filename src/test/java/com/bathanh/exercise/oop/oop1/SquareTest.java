@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SquareTest {
 
     final Point point1 = new Point(3, 4);
-    Shape square = new Square(point1, 5);
+    Rectangle square = new Square(point1, 5);
 
     @Test
     void getArea() {

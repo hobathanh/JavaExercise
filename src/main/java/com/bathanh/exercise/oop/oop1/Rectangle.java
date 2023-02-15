@@ -1,10 +1,14 @@
 package com.bathanh.exercise.oop.oop1;
 
-public class Rectangle extends Square {
+public class Rectangle implements Shape {
 
     private final Point pointBottomLeft;
     private final Point pointTopRight;
 
+    public Rectangle() {
+        pointTopRight = new Point(0, 0);
+        pointBottomLeft = new Point(0, 0);
+    }
 
     public Rectangle(Point bottomLeft, Point topRight) {
         this.pointBottomLeft = bottomLeft;
@@ -30,12 +34,9 @@ public class Rectangle extends Square {
         final double x = point.getX();
         final double y = point.getY();
 
-        if (x < pointBottomLeft.getX() || x > pointTopRight.getX()) {
+        if (!(x >= pointBottomLeft.getX() && x <= pointTopRight.getX())) {
             return false;
         }
-        if (y < pointBottomLeft.getY() || y > pointTopRight.getY()) {
-            return false;
-        }
-        return true;
+        return y >= pointBottomLeft.getY() && y <= pointTopRight.getY();
     }
 }
