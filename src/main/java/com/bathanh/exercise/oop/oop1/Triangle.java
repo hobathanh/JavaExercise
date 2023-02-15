@@ -20,16 +20,11 @@ public class Triangle implements Shape {
         double x3 = point3.getX();
         double y3 = point3.getY();
 
-        return Math.abs(0.5 * ((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1)));
-    }
-
-    public double calculateDistance(Point point1, Point point2) {
-        return Math.sqrt((point2.getX() - point1.getX()) * (point2.getX() - point1.getX())
-                + (point2.getY() - point1.getY()) * (point2.getY() - point1.getY()));
+        return Math.abs(0.5 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)));
     }
 
     public double getPerimeter() {
-        return calculateDistance(point1, point2) + calculateDistance(point1, point3) + calculateDistance(point2, point3);
+        return point1.distanceTo(point2) + point2.distanceTo(point3) + point3.distanceTo(point1);
     }
 
     @Override
