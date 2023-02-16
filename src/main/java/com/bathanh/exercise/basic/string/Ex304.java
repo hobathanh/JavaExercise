@@ -3,10 +3,8 @@ package com.bathanh.exercise.basic.string;
 public class Ex304 {
 
     public boolean checkRepeatString(final String str) {
-        String childString = "";
-        for (int i = 0; i < str.length() / 2; i++) {
-            childString += str.charAt(i);
-            if (isRepeating(str, childString)) {
+        for (int i = 1; i < str.length() / 2; i++) {
+            if (isRepeating(str, str.substring(0, i))) {
                 return true;
             }
         }
