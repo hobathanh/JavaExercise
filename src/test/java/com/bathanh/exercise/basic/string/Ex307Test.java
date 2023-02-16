@@ -11,8 +11,10 @@ class Ex307Test {
         final var ex307 = new Ex307();
 
         assertEquals(2, ex307.findIndexStringInString("oiutytre", "utyt"));
+        assertEquals(2, ex307.findIndexStringInString("utyt", "oiutytredajhfsafjvajf"));
         assertEquals(1, ex307.findIndexStringInString("toabcd", "oa"));
         assertEquals(0, ex307.findIndexStringInString("todyyyabcd", "t"));
+        assertEquals(0, ex307.findIndexStringInString("t", "todyyyabcd"));
         assertEquals(-1, ex307.findIndexStringInString("dadasda", "k"));
     }
 }
