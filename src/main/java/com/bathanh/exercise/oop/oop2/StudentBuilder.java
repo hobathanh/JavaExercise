@@ -2,59 +2,22 @@ package com.bathanh.exercise.oop.oop2;
 
 import java.time.LocalDate;
 
-public class StudentBuilder {
+public interface StudentBuilder {
+    StudentBuilder setFirstName(String firstName);
 
-    private String firstName;
-    private String lastName;
-    private LocalDate birthDay;
-    private String gender;
-    private boolean isGraduate;
-    private boolean hasExperience;
-    private String city;
-    private String state;
-    private boolean isEarning;
+    StudentBuilder setLastName(String lastName);
 
-    public StudentBuilder(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+    StudentBuilder setBirthDay(LocalDate birthDay);
 
-    public StudentBuilder addAge(String age) {
-        this.age = age;
-        return this;
-    }
+    StudentBuilder setClassName(String className);
 
-    public StudentBuilder addGender(String gender) {
-        this.gender = gender;
-        return this;
-    }
+    StudentBuilder setAddress(String address);
 
-    public StudentBuilder addisGraduate(boolean isGraduate) {
-        this.isGraduate = isGraduate;
-        return this;
-    }
+    StudentBuilder setGender(Gender gender);
 
-    public StudentBuilder addHasExperience(boolean hasExperience) {
-        this.hasExperience = hasExperience;
-        return this;
-    }
+    StudentBuilder setEmail(String email);
 
-    public StudentBuilder addCity(String city) {
-        this.city = city;
-        return this;
-    }
+    StudentBuilder setPhone(String phone);
 
-    public StudentBuilder addState(String state) {
-        this.state = state;
-        return this;
-    }
-
-    public StudentBuilder addIsEarning(boolean isEarning) {
-        this.isEarning = isEarning;
-        return this;
-    }
-
-    public Student build() {
-        return new Student(this);
-    }
+    Student build();
 }

@@ -13,15 +13,15 @@ public class Student {
     private final String email;
     private final String phone;
 
-    private Student(StudentBuilder builder) {
-        this.firstName = builder.firstName;
-        this.lastName = builder.lastName;
-        this.birthDay = builder.birthDay;
-        this.className = builder.className;
-        this.address = builder.address;
-        this.gender = builder.gender;
-        this.email = builder.email;
-        this.phone = builder.phone;
+    public Student(String firstName, String lastName, LocalDate birthDay, String className, String address, Gender gender, String email, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDay = birthDay;
+        this.className = className;
+        this.address = address;
+        this.gender = gender;
+        this.email = email;
+        this.phone = phone;
     }
 
     public String getFirstName() {
@@ -56,9 +56,7 @@ public class Student {
         return phone;
     }
 
-    @Override
     public String toString() {
-        return "Student: " + this.firstName + ", " + this.lastName + ", " + this.birthDay + ", "
-                + this.className + ", " + this.address + ", " + this.gender + ", " + this.email + ", " + this.phone;
+        return "Student: " + firstName + " " + lastName + ", " + birthDay + ", " + className + ", " + address + ", " + gender + ", " + email + ", " + phone;
     }
 }
