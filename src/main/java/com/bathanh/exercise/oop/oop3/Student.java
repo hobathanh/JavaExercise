@@ -1,11 +1,13 @@
 package com.bathanh.exercise.oop.oop3;
 
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
-@Data
+@Getter
+@Setter
 @Builder
 public class Student {
     private final String firstName;
