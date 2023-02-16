@@ -10,9 +10,9 @@ class Ex307Test {
     void searchStringInString() {
         final var ex307 = new Ex307();
 
-        assertEquals(2, ex307.findIndexStringInString("utyt", "oiutytre"));
-        assertEquals(1, ex307.findIndexStringInString("o", "toabcd"));
-        assertEquals(-1, ex307.findIndexStringInString("k", "dadasda"));
-        assertEquals(-1, ex307.findIndexStringInString("gdgdg", "d"));
+        assertEquals(2, ex307.findIndexStringInString("oiutytre", "utyt"));
+        assertEquals(1, ex307.findIndexStringInString("toabcd", "oa"));
+        assertEquals(0, ex307.findIndexStringInString("todyyyabcd", "t"));
+        assertEquals(-1, ex307.findIndexStringInString("dadasda", "k"));
     }
 }
