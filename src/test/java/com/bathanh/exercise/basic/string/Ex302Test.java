@@ -13,8 +13,8 @@ class Ex302Test {
 
         assertTrue(ex302.checkSymmetricString("abba"));
         assertTrue(ex302.checkSymmetricString("abdba"));
-        assertTrue(ex302.checkSymmetricString("0"));
         assertTrue(ex302.checkSymmetricString(""));
+        assertTrue(ex302.checkSymmetricString("a"));
         assertFalse(ex302.checkSymmetricString("abcabc"));
     }
 }
