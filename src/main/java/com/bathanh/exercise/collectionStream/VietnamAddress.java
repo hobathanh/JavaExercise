@@ -7,9 +7,9 @@ import java.util.List;
 
 @Getter
 @ToString
-public class VietnameseAddress {
+public class VietnamAddress {
     private List<Province> provinces;
-    private List<District> Districts;
-    private List<Commune> Communes;
+    private List<District> districts;
+    private List<Commune> communes;
 
 }
