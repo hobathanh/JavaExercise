@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class ExecutionFunction {
 
-    final String filePath = "C:\\Users\\hobat\\IdeaProjects\\JavaExercise\\src\\main\\data.json";
+    final String filePath = "src/main/data.json";
 
     public VietnamAddress parseJsonFile(final String filePath) throws IOException {
         final var objectMapper = new ObjectMapper();

@@ -9,8 +9,8 @@ import java.util.List;
 @Data
 
 public class Province {
-    String id;
-    String name;
+    private String id;
+    private String name;
     @ToString.Exclude
-    List<District> districts = new ArrayList<>();
+    final List<District> districts = new ArrayList<>();
 }

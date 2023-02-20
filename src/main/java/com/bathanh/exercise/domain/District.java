@@ -10,9 +10,9 @@ import java.util.List;
 @Data
 
 public class District {
-    String id;
-    String name;
+    private String id;
+    private String name;
     Province province;
     @ToString.Exclude
-    List<Commune> communes = new ArrayList<>();
+    final List<Commune> communes = new ArrayList<>();
 }

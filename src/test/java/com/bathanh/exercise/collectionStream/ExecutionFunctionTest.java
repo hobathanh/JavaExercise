@@ -7,7 +7,7 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ExecutionFunctionTest {
-    final String filePath = "C:\\Users\\hobat\\IdeaProjects\\JavaExercise\\src\\main\\data.json";
+    final String filePath = "src/main/data.json";
 
     @Test
     void parseJsonFile_Ok() throws IOException {

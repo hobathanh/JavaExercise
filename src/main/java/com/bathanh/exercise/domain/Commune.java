@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 
 public class Commune {
-    String id;
-    String name;
+    private String id;
+    private String name;
     District district;
 }
