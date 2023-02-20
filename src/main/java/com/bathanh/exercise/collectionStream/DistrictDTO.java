@@ -5,7 +5,7 @@ import lombok.ToString;
 
 @Getter
 @ToString
-public class District {
+public class DistrictDTO {
     private String idProvince;
     private String idDistrict;
     private String name;

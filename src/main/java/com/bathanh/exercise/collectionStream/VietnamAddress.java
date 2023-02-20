@@ -8,8 +8,8 @@ import java.util.List;
 @Getter
 @ToString
 public class VietnamAddress {
-    private List<Province> provinces;
-    private List<District> districts;
-    private List<Commune> communes;
+    private List<ProvinceDTO> provinces;
+    private List<DistrictDTO> districts;
+    private List<CommuneDTO> communes;
 
 }
