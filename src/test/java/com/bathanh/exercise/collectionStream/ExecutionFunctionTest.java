@@ -7,14 +7,14 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ExecutionFunctionTest {
-    final String filePath = "src/main/data.json";
+
 
     @Test
     void parseJsonFile_Ok() throws IOException {
         final var executionFunction = new ExecutionFunction();
-        final VietnamAddress vietnamAddress = executionFunction.parseJsonFile(filePath);
+        final VietnamAddress vietnamAddress = executionFunction.parseVietnameseAddress();
 
-        assertEquals(executionFunction.parseJsonFile(filePath).toString(), vietnamAddress.toString());
+        assertEquals(executionFunction.parseVietnameseAddress().toString(), vietnamAddress.toString());
 
         assertEquals(63, vietnamAddress.getProvinces().size());
         assertEquals(705, vietnamAddress.getDistricts().size());

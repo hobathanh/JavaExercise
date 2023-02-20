@@ -9,16 +9,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+
+import static com.bathanh.exercise.utils.JsonParser.parseJsonFile;
 
 public class ExecutionFunction {
 
-    final String filePath = "src/main/data.json";
+    final String filePath = "src/main/resources/data.json";
 
-    public VietnamAddress parseJsonFile(final String filePath) throws IOException {
-        final var objectMapper = new ObjectMapper();
-        VietnamAddress vietnamAddress = objectMapper.readValue(new File(filePath), VietnamAddress.class);
-        return vietnamAddress;
+    public VietnamAddress parseVietnameseAddress() throws IOException {
+        return parseJsonFile(VietnamAddress.class, filePath);
     }
 
     public List<String> findVietnamAddressByCommune(final String communeName) throws IOException {
@@ -31,7 +30,7 @@ public class ExecutionFunction {
             province.setId(provinceDTO.getIdProvince());
             province.setName(provinceDTO.getName());
             return province;
-        }).collect(Collectors.toList());
+        }).toList();
 
 
         var districts = vietnamAddress.getDistricts().stream().map(districtDTO -> {
@@ -45,7 +44,7 @@ public class ExecutionFunction {
                 province.getDistricts().add(district);
             });
             return district;
-        }).collect(Collectors.toList());
+        }).toList();
 
         var communes = vietnamAddress.getCommunes().stream().map(communeDTO -> {
             var commune = new Commune();
@@ -58,15 +57,15 @@ public class ExecutionFunction {
                 district.getCommunes().add(commune);
             });
             return commune;
-        }).collect(Collectors.toList());
+        }).toList();
 
 
         communes.stream().filter(commune -> commune.getName().contains(communeName)).forEach(commune -> {
-            var mess = String.format("%s, %s, %s"
+            var output = String.format("%s, %s, %s"
                     , commune.getName()
                     , commune.getDistrict().getName()
                     , commune.getDistrict().getProvince().getName());
-            result.add(mess);
+            result.add(output);
         });
 
         return result;

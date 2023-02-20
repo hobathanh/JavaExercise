@@ -1,9 +1,12 @@
 package com.bathanh.exercise.domain;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+;
 
+@Getter
+@Setter
 public class Commune {
     private String id;
     private String name;

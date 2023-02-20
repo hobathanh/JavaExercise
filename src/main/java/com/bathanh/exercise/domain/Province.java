@@ -1,13 +1,14 @@
 package com.bathanh.exercise.domain;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
-
+@Getter
+@Setter
 public class Province {
     private String id;
     private String name;
