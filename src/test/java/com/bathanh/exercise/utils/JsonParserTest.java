@@ -8,9 +8,8 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class JsonParserTest {
-
     @Test
-    void parseJsonFile() {
+    void parseJsonFile() throws IOException {
         assertThrows(IOException.class, () -> {
             JsonParser.parseJsonFile(District.class, "data.json");
         });

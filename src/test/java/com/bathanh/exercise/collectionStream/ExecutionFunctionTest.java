@@ -32,6 +32,11 @@ class ExecutionFunctionTest {
         assertEquals("001", communeDTO.getIdDistrict());
         assertEquals("00001", communeDTO.getIdCommune());
         assertEquals("Phường Phúc Xá", communeDTO.getName());
+
+//        Commune commune = Commune.Get
+//        assertEquals("001", communeDTO.getIdDistrict());
+//        assertEquals("00001", communeDTO.getIdCommune());
+//        assertEquals("Phường Phúc Xá", communeDTO.getName());
     }
 
     @Test
