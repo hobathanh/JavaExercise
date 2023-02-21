@@ -6,7 +6,7 @@ public class Triangle implements Shape {
     private final Point point2;
     private final Point point3;
 
-    public Triangle(Point point1, Point point2, Point point3) {
+    public Triangle(final Point point1, final Point point2, final Point point3) {
         this.point1 = point1;
         this.point2 = point2;
         this.point3 = point3;
@@ -20,14 +20,14 @@ public class Triangle implements Shape {
         double x3 = point3.getX();
         double y3 = point3.getY();
 
-        return Math.abs(0.5 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)));
+        return 0.5 * Math.abs((x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)));
     }
 
     public double getPerimeter() {
         return point1.distanceTo(point2) + point2.distanceTo(point3) + point3.distanceTo(point1);
     }
 
-    public double sideOfTheLine(final Point point1, final Point point2, final Point point) {
+    public static double sideOfTheLine(final Point point1, final Point point2, final Point point) {
         final double x = point.getX();
         final double y = point.getY();
         final double x1 = point1.getX();

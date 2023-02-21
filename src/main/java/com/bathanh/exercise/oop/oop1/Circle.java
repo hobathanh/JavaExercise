@@ -2,11 +2,10 @@ package com.bathanh.exercise.oop.oop1;
 
 public class Circle implements Shape {
 
-    private double radius;
-    private Point center;
+    private final double radius;
+    private final Point center;
 
-
-    public Circle(Point center, double radius) {
+    public Circle(final Point center, final double radius) {
         this.center = center;
         this.radius = radius;
     }
@@ -22,11 +21,7 @@ public class Circle implements Shape {
     }
 
     @Override
-    public boolean contains(Point point) {
-        final double x = point.getX();
-        final double y = point.getY();
-        final double dx = Math.abs(x - center.getX());
-        final double dy = Math.abs(y - center.getY());
-        return (dx * dx + dy * dy <= radius * radius);
+    public boolean contains(final Point point) {
+        return point.distanceTo(center) * point.distanceTo(center) <= radius * radius;
     }
 }

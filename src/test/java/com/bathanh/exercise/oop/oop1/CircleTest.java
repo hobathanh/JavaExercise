@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CircleTest {
 
     final Point point1 = new Point(7, 4);
-    Shape circle = new Circle(point1, 3);
+    final Shape circle = new Circle(point1, 3);
 
     @Test
     void getArea() {

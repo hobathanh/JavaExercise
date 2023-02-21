@@ -4,7 +4,7 @@ public class Point {
     private final int x;
     private final int y;
 
-    public Point(int x, int y) {
+    public Point(final int x, final int y) {
         this.x = x;
         this.y = y;
     }
@@ -18,7 +18,8 @@ public class Point {
     }
 
     public double distanceTo(final Point point) {
-        return Math.sqrt((point.getX() - this.getX()) * (point.getX() - this.getX())
-                + (point.getY() - this.getY()) * (point.getY() - this.getY()));
+        final double dx = point.getX() - this.getX();
+        final double dy = point.getY() - this.getY();
+        return Math.sqrt(dx * dx + dy * dy);
     }
 }

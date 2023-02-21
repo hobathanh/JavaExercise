@@ -2,41 +2,36 @@ package com.bathanh.exercise.oop.oop1;
 
 public class Rectangle implements Shape {
 
-    private final Point pointBottomLeft;
-    private final Point pointTopRight;
+    private final Point bottomLeft;
+    private final Point topRight;
 
-//    public Rectangle() {
-//        pointTopRight = new Point(0, 0);
-//        pointBottomLeft = new Point(0, 0);
-//    }
-
-    public Rectangle(Point bottomLeft, Point topRight) {
-        this.pointBottomLeft = bottomLeft;
-        this.pointTopRight = topRight;
+    public Rectangle(final Point bottomLeft, final Point topRight) {
+        this.bottomLeft = bottomLeft;
+        this.topRight = topRight;
     }
 
     @Override
     public double getArea() {
-        return (pointTopRight.getX() - pointBottomLeft.getX()) * (pointTopRight.getY() - pointBottomLeft.getY());
+        final double dx = topRight.getX() - bottomLeft.getX();
+        final double dy = topRight.getY() - bottomLeft.getY();
+        return dx * dy;
     }
 
     @Override
     public double getPerimeter() {
-        final double xTopRight = pointTopRight.getX();
-        final double yTopRight = pointTopRight.getY();
-        final double xBottomLeft = pointBottomLeft.getX();
-        final double yBottomLeft = pointBottomLeft.getY();
-        return 2 * ((xTopRight - xBottomLeft) + (yTopRight - yBottomLeft));
+        final double dx = topRight.getX() - bottomLeft.getX();
+        final double dy = topRight.getY() - bottomLeft.getY();
+        return 2 * (dx + dy);
     }
 
     @Override
-    public boolean contains(Point point) {
+    public boolean contains(final Point point) {
         final double x = point.getX();
         final double y = point.getY();
 
-        if (!(x >= pointBottomLeft.getX() && x <= pointTopRight.getX())) {
+        if (!(x >= bottomLeft.getX() && x <= topRight.getX())) {
             return false;
         }
-        return y >= pointBottomLeft.getY() && y <= pointTopRight.getY();
+        return y >= bottomLeft.getY() && y <= topRight.getY();
     }
 }
