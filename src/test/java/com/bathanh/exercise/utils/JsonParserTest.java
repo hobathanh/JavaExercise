@@ -9,12 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class JsonParserTest {
 
-    final String filePath = "src/main/resources/data.json";
-
     @Test
-    void parseJsonFile() throws IOException {
+    void parseJsonFile() {
         assertThrows(IOException.class, () -> {
-            JsonParser.parseJsonFile(District.class, filePath);
+            JsonParser.parseJsonFile(District.class, "data.json");
         });
     }
 }

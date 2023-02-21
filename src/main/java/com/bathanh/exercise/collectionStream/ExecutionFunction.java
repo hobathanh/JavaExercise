@@ -3,9 +3,7 @@ package com.bathanh.exercise.collectionStream;
 import com.bathanh.exercise.domain.Commune;
 import com.bathanh.exercise.domain.District;
 import com.bathanh.exercise.domain.Province;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,18 +12,14 @@ import static com.bathanh.exercise.utils.JsonParser.parseJsonFile;
 
 public class ExecutionFunction {
 
-    final String filePath = "src/main/resources/data.json";
-
     public VietnamAddress parseVietnameseAddress() throws IOException {
-        return parseJsonFile(VietnamAddress.class, filePath);
+        return parseJsonFile(VietnamAddress.class, "data.json");
     }
 
     public List<String> findVietnamAddressByCommune(final String communeName) throws IOException {
         final List<String> result = new ArrayList<>();
-        final var objectMapper = new ObjectMapper();
-        VietnamAddress vietnamAddress = objectMapper.readValue(new File(filePath), VietnamAddress.class);
 
-        var provinces = vietnamAddress.getProvinces().stream().map(provinceDTO -> {
+        var provinces = parseVietnameseAddress().getProvinces().stream().map(provinceDTO -> {
             var province = new Province();
             province.setId(provinceDTO.getIdProvince());
             province.setName(provinceDTO.getName());
@@ -33,7 +27,7 @@ public class ExecutionFunction {
         }).toList();
 
 
-        var districts = vietnamAddress.getDistricts().stream().map(districtDTO -> {
+        var districts = parseVietnameseAddress().getDistricts().stream().map(districtDTO -> {
             var district = new District();
             district.setId(districtDTO.getIdDistrict());
             district.setName(districtDTO.getName());
@@ -46,7 +40,7 @@ public class ExecutionFunction {
             return district;
         }).toList();
 
-        var communes = vietnamAddress.getCommunes().stream().map(communeDTO -> {
+        var communes = parseVietnameseAddress().getCommunes().stream().map(communeDTO -> {
             var commune = new Commune();
             commune.setId(communeDTO.getIdCommune());
             commune.setName(communeDTO.getName());
@@ -58,7 +52,6 @@ public class ExecutionFunction {
             });
             return commune;
         }).toList();
-
 
         communes.stream().filter(commune -> commune.getName().contains(communeName)).forEach(commune -> {
             var output = String.format("%s, %s, %s"

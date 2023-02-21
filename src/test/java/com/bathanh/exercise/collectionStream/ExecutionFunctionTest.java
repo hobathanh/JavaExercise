@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ExecutionFunctionTest {
 
@@ -13,8 +14,6 @@ class ExecutionFunctionTest {
     void parseJsonFile_Ok() throws IOException {
         final var executionFunction = new ExecutionFunction();
         final VietnamAddress vietnamAddress = executionFunction.parseVietnameseAddress();
-
-        assertEquals(executionFunction.parseVietnameseAddress().toString(), vietnamAddress.toString());
 
         assertEquals(63, vietnamAddress.getProvinces().size());
         assertEquals(705, vietnamAddress.getDistricts().size());
@@ -43,7 +42,6 @@ class ExecutionFunctionTest {
                 .containsAll(executionFunction.findVietnamAddressByCommune("Phúc Thành")));
         assertTrue(executionFunction.findVietnamAddressByCommune("Phúc Xá")
                 .contains("Phường Phúc Xá, Quận Ba Đình, Thành phố Hà Nội"));
-        assertFalse(executionFunction.findVietnamAddressByCommune("Phúc Thành")
-                .contains(executionFunction.findVietnamAddressByCommune("123")));
+        assertTrue(executionFunction.findVietnamAddressByCommune("123").isEmpty());
     }
 }
