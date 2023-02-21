@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class Student {
     private final String firstName;
     private final String lastName;
-    private final LocalDate birthDay;
+    private final LocalDate birthday;
     private final String className;
     private final String address;
     private final Gender gender;

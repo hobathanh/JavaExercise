@@ -14,7 +14,7 @@ class StudentTest {
                 .firstName("Ho")
                 .lastName("Ba Thanh")
                 .address("Nghe An")
-                .birthDay(LocalDate.of(2001, 9, 29))
+                .birthday(LocalDate.of(2001, 9, 29))
                 .phone("069696969")
                 .gender(Gender.MALE)
                 .className("A")
@@ -24,7 +24,7 @@ class StudentTest {
         assertEquals("Ho", student.getFirstName());
         assertEquals("Ba Thanh", student.getLastName());
         assertEquals("Nghe An", student.getAddress());
-        assertEquals(LocalDate.of(2001, 9, 29), student.getBirthDay());
+        assertEquals(LocalDate.of(2001, 9, 29), student.getBirthday());
         assertEquals("069696969", student.getPhone());
         assertEquals(Gender.MALE, student.getGender());
         assertEquals("A", student.getClassName());
