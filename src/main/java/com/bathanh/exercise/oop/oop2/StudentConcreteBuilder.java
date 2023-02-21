@@ -13,49 +13,49 @@ public class StudentConcreteBuilder implements StudentBuilder {
     private String phone;
 
     @Override
-    public StudentBuilder setFirstName(String firstName) {
+    public StudentBuilder setFirstName(final String firstName) {
         this.firstName = firstName;
         return this;
     }
 
     @Override
-    public StudentBuilder setLastName(String lastName) {
+    public StudentBuilder setLastName(final String lastName) {
         this.lastName = lastName;
         return this;
     }
 
     @Override
-    public StudentBuilder setBirthDay(LocalDate birthDay) {
+    public StudentBuilder setBirthDay(final LocalDate birthDay) {
         this.birthDay = birthDay;
         return this;
     }
 
     @Override
-    public StudentBuilder setClassName(String className) {
+    public StudentBuilder setClassName(final String className) {
         this.className = className;
         return this;
     }
 
     @Override
-    public StudentBuilder setAddress(String address) {
+    public StudentBuilder setAddress(final String address) {
         this.address = address;
         return this;
     }
 
     @Override
-    public StudentBuilder setGender(Gender gender) {
+    public StudentBuilder setGender(final Gender gender) {
         this.gender = gender;
         return this;
     }
 
     @Override
-    public StudentBuilder setEmail(String email) {
+    public StudentBuilder setEmail(final String email) {
         this.email = email;
         return this;
     }
 
     @Override
-    public StudentBuilder setPhone(String phone) {
+    public StudentBuilder setPhone(final String phone) {
         this.phone = phone;
         return this;
     }

@@ -61,6 +61,14 @@ class StudentTest {
 
     @Test
     void testToString() {
-        assertEquals("Student: Ho Ba Thanh, 2001-09-29, A, Nghe An, MALE, hobathanh201@gmail.com, 06969696969", studentBuilder.build().toString());
+        assertEquals(studentBuilder.build().toString(), String.format("{%s}, {%s}, {%s}, {%s}, {%s}, {%s}, {%s}, {%s}"
+                , studentBuilder.build().getFirstName(),
+                studentBuilder.build().getLastName(),
+                studentBuilder.build().getBirthDay(),
+                studentBuilder.build().getClassName(),
+                studentBuilder.build().getAddress(),
+                studentBuilder.build().getGender(),
+                studentBuilder.build().getEmail(),
+                studentBuilder.build().getPhone()));
     }
 }
