@@ -2,26 +2,24 @@ package com.bathanh.exercise.oop.oop1;
 
 public class Rectangle implements Shape {
 
-    private final Point bottomLeft;
-    private final Point topRight;
+    private final Point topLeft;
+    private final double width;
+    private final double height;
 
-    public Rectangle(final Point bottomLeft, final Point topRight) {
-        this.bottomLeft = bottomLeft;
-        this.topRight = topRight;
+    public Rectangle(final Point topLeft, final double width, final double height) {
+        this.topLeft = topLeft;
+        this.width = width;
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        final double dx = topRight.getX() - bottomLeft.getX();
-        final double dy = topRight.getY() - bottomLeft.getY();
-        return dx * dy;
+        return width * height;
     }
 
     @Override
     public double getPerimeter() {
-        final double dx = topRight.getX() - bottomLeft.getX();
-        final double dy = topRight.getY() - bottomLeft.getY();
-        return 2 * (dx + dy);
+        return 2 * (width + height);
     }
 
     @Override
@@ -29,9 +27,9 @@ public class Rectangle implements Shape {
         final double x = point.getX();
         final double y = point.getY();
 
-        if (!(x >= bottomLeft.getX() && x <= topRight.getX())) {
+        if (!(x <= (topLeft.getX() + width) && x >= topLeft.getX())) {
             return false;
         }
-        return y >= bottomLeft.getY() && y <= topRight.getY();
+        return y >= (topLeft.getY() - height) && y <= topLeft.getY();
     }
 }
