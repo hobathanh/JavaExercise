@@ -9,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ExecutionFunctionTest {
 
-
     @Test
     void parseJsonFile_Ok() throws IOException {
         final var executionFunction = new ExecutionFunction();
@@ -33,10 +32,6 @@ class ExecutionFunctionTest {
         assertEquals("00001", communeDTO.getIdCommune());
         assertEquals("Phường Phúc Xá", communeDTO.getName());
 
-//        Commune commune = Commune.Get
-//        assertEquals("001", communeDTO.getIdDistrict());
-//        assertEquals("00001", communeDTO.getIdCommune());
-//        assertEquals("Phường Phúc Xá", communeDTO.getName());
     }
 
     @Test
