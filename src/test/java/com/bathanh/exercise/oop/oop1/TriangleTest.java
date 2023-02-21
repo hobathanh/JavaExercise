@@ -8,19 +8,19 @@ class TriangleTest {
 
     @Test
     void getArea() {
-        Shape triangle = new Triangle(new Point(3, 4), new Point(7, 4), new Point(5, 8));
+        final Shape triangle = new Triangle(new Point(3, 4), new Point(7, 4), new Point(5, 8));
         assertEquals(8, triangle.getArea(), 0.0001);
     }
 
     @Test
     void getPerimeter() {
-        Shape triangle = new Triangle(new Point(3, 4), new Point(7, 4), new Point(5, 8));
+        final Shape triangle = new Triangle(new Point(3, 4), new Point(7, 4), new Point(5, 8));
         assertEquals(12.9442, triangle.getPerimeter(), 0.0001);
     }
 
     @Test
     void contains() {
-        Shape triangle = new Triangle(new Point(3, 4), new Point(7, 4), new Point(5, 8));
+        final Shape triangle = new Triangle(new Point(3, 4), new Point(7, 4), new Point(5, 8));
 
         assertFalse(triangle.contains(new Point(2, 6)));
         assertFalse(triangle.contains(new Point(5, 3)));

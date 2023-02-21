@@ -22,6 +22,6 @@ public class Circle implements Shape {
 
     @Override
     public boolean contains(final Point point) {
-        return point.distanceTo(center) * point.distanceTo(center) <= radius * radius;
+        return point.distanceTo(center) <= radius;
     }
 }
